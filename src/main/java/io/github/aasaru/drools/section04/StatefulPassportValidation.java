@@ -42,9 +42,7 @@ public class StatefulPassportValidation {
     System.out.println("==== DROOLS SESSION END ==== ");
 
     System.out.println("==== PASSPORTS AFTER DROOLS SESSION === ");
-    passports.forEach(passport -> {
-      System.out.println(passport + " verdict: " + passport.getValidation() + ", cause: " + passport.getCause());
-    });
+    passports.forEach(passport -> System.out.println(passport + " verdict: " + passport.getValidation() + ", cause: " + passport.getCause()));
 
 
   }
