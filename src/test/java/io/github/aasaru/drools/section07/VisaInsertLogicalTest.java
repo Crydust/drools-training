@@ -60,7 +60,7 @@ class VisaInsertLogicalTest {
 
     Collection<ValidVisaApplication> validVisaApplications = new HashSet<>();
     addObjectsOfType(ksession, validVisaApplications, ValidVisaApplication.class);
-    assertThat(validVisaApplications.stream().findFirst().get().getVisaApplication().getPassportNumber(), is(equalTo(EMILY_PASSPORT_NUMBER)));
+    assertThat(validVisaApplications.stream().findFirst().orElseThrow().getVisaApplication().getPassportNumber(), is(equalTo(EMILY_PASSPORT_NUMBER)));
 
 
     Collection<InvalidVisaApplication> invalidVisaApplications = new HashSet<>();
