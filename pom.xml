@@ -90,7 +90,6 @@
       <groupId>org.drools</groupId>
       <artifactId>drools-mvel</artifactId>
       <version>${drools.version}</version>
-      <scope>compile</scope>
     </dependency>
 
     <dependency>
