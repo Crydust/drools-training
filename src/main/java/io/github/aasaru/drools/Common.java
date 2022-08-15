@@ -29,7 +29,7 @@ public class Common {
           return Integer.parseInt(stepStr);
         }
         else {
-          System.out.print(String.format("Section %d. Enter step (%d...%d): ", section, minStep, maxStep));
+          System.out.printf("Section %d. Enter step (%d...%d): ", section, minStep, maxStep);
           stepStr = br.readLine();
         }
 
@@ -59,7 +59,7 @@ public class Common {
     while (true) {
       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
       try {
-        System.out.print(String.format("%s Enter 'yes' or 'no': ", question));
+        System.out.printf("%s Enter 'yes' or 'no': ", question);
         enteredStr = br.readLine().trim();
 
         if ("yes".equalsIgnoreCase(enteredStr) || "y".equalsIgnoreCase(enteredStr)) {
