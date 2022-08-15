@@ -77,7 +77,7 @@ class VisaInsertLogicalTest {
     return invalidVisaApplications.stream().map(InvalidVisaApplication::getVisaApplication).map(VisaApplication::getPassportNumber).collect(Collectors.toList());
   }
 
-  private void addObjectsOfType(KieSession ksession, Collection collection, Class type) {
+  private <T> void addObjectsOfType(KieSession ksession, Collection<T> collection, Class<T> type) {
 
     for (Object object : ksession.getObjects()) {
       if (object.getClass() == type) {
