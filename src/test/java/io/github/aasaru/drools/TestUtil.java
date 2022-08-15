@@ -38,7 +38,7 @@ public class TestUtil {
         Optional.ofNullable(TestUtil.getKieSession(kieSessionName)).ifPresent(KieSession::dispose);
     }
 
-    public static void addObjectsOfType(KieSession ksession, Collection collection, Class type) {
+    public static <T> void addObjectsOfType(KieSession ksession, Collection<T> collection, Class<T> type) {
 
         for (Object object : ksession.getObjects()) {
             if (object.getClass() == type) {
