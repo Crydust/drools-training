@@ -51,6 +51,8 @@ public class VisaIssue {
 
 
     if (step == 3) {
+      // LIFO
+      // push agenda groups on stack
       Agenda agenda = ksession.getAgenda();
       agenda.getAgendaGroup("issue-visa").setFocus();
       agenda.getAgendaGroup("valid-application").setFocus();
