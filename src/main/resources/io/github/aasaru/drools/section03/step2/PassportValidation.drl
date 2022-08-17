@@ -6,7 +6,7 @@ import java.time.LocalDate;
 rule "Valid passport"
   dialect "java"
   when
-	Passport( !isExpired(), unusedVisaPages > 0 )
+	Passport( !expired && unusedVisaPages > 0 )
   then
 	System.out.println( "This passport is CORRECT" );
 end
@@ -14,7 +14,7 @@ end
 rule "Expired passport"
   dialect "java"
   when
-	Passport( isExpired() )
+	Passport( expired )
   then
 	System.out.println( "This passport is INVALID because it is expired" );
 end
